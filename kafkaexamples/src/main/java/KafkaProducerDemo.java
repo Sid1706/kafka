@@ -23,7 +23,7 @@ public class KafkaProducerDemo {
 
         for (int key=0; key < 10; key++){
             ProducerRecord<String, String> producerRecord =
-                    new ProducerRecord<String, String>("second_topic", Integer.toString(key), "message that has key: " + Integer.toString(key));
+                    new ProducerRecord<String, String>("first_topic", Integer.toString(key), "message that has key: " + Integer.toString(key));
             producer.send(producerRecord);
         }
 
