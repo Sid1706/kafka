@@ -21,7 +21,7 @@ public class KafkaConsumerDemo {
         properties.setProperty("auto.offset.reset", "earliest");
 
         KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<String, String>(properties);
-        kafkaConsumer.subscribe(Arrays.asList("second_topic"));
+        kafkaConsumer.subscribe(Arrays.asList("first_topic"));
 
         while(true) {
             ConsumerRecords<String, String> consumerRecords = kafkaConsumer.poll(100);
